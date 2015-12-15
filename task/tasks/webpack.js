@@ -17,7 +17,7 @@ var gulp = require( 'gulp' )
 ,   config = require('../configs/config.js')
 ;
 
-gulp.task( 'webpack', [ 'markup:cache' ], function() {
+gulp.task( 'webpack', function() {
 
     var s = size();
 
@@ -27,7 +27,7 @@ gulp.task( 'webpack', [ 'markup:cache' ], function() {
             null,
             function( err, stats ) {
                 if ( err ) throw new util.PluginError( "webpack", err );
-                // util.log( '[webpack]', stats.toString() );
+                util.log( '[webpack]', stats.toString() );
             }
         ))
         .pipe( s )
