@@ -5,7 +5,7 @@ var path = require('path')
 var webpackConfig = {
     debug: true,
     entry: {
-        app: path.resolve( __dirname, './src/script/core/boot.js' )
+        app: path.resolve( __dirname, './src/script/index.js' )
     },
     output: {
         path: path.resolve( __dirname, './public/script/' ),
