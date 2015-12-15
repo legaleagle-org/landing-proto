@@ -9,7 +9,7 @@ var gulp = require( 'gulp' )
 gulp.task( 'watch', [ 'setWatch' ], function() {
 
     /* let gulp knows when markups change */
-    gulp.watch( config.webpack.input + '/**/*.html', [ 'markups' ] );
+    gulp.watch( config.markup.view.input[0], [ 'markups' ] );
 
     /* tell webpack when client-side sources change */
     gulp.watch( config.webpack.input + '/**/*.js', [ 'webpack' ] );

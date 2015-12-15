@@ -10,4 +10,4 @@ __webpack_public_path__ =
     + '/public/script/'
 ;
 
-console.log( 'SIRNA, FTW!' );
+console.log( 'SIRNA, YO!' );
