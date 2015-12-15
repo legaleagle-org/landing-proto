@@ -96,3 +96,4 @@ plugins/*
 secret/*
 
 ## Change below according your project environment ##
+public/*
