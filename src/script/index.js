@@ -10,4 +10,10 @@ __webpack_public_path__ =
     + '/public/script/'
 ;
 
-console.log( 'SIRNA, YO!' );
+var dommon = require( './module/dommon' )
+,   landing = require( './module/landing' );
+
+dommon.ready( function() {
+
+    this.swiper = landing.section.initSwiper();
+});

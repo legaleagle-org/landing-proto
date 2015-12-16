@@ -1,0 +1,29 @@
+$font-url: '../font/';
+
+@include s-font-face( 'SansRegular', 'HelveticaNeue', $font-url, normal, normal );
+@include s-font-face( 'SansBold', 'HelveticaNeueBold', $font-url, normal, normal );
+@include s-font-face( 'SansBoldItalic', 'HelveticaNeueBoldItalic', $font-url, normal, normal );
+@include s-font-face( 'SansCondensedBlack', 'HelveticaNeueCondensedBlack', $font-url, normal, normal );
+@include s-font-face( 'SansCondensedBold', 'HelveticaNeueCondensedBold', $font-url, normal, normal );
+@include s-font-face( 'SansItalic', 'HelveticaNeueItalic', $font-url, normal, normal );
+@include s-font-face( 'SansLight', 'HelveticaNeueLight', $font-url, normal, normal );
+@include s-font-face( 'SansLightItalic', 'HelveticaNeueLightItalic', $font-url, normal, normal );
+@include s-font-face( 'SansMedium', 'HelveticaNeueMedium', $font-url, normal, normal );
+@include s-font-face( 'SansUltraLight', 'HelveticaNeueUltraLight', $font-url, normal, normal );
+@include s-font-face( 'SansUltraLightItalic', 'HelveticaNeueUltraLightItalic', $font-url, normal, normal );
+@include s-font-face( 'FontAwesome', 'fontawesome-webfont', $font-url, normal, normal );
+
+$ff-sans-regular: 'SansRegular', 'Helvetica Neue', Helvetica, Arial, sans-serif !default;
+$ff-sans-bold: 'SansBold', 'Helvetica Neue', Helvetica, Arial, sans-serif !default;
+$ff-sans-bold-italic: 'SansBoldItalic', 'Helvetica Neue', Helvetica, Arial, sans-serif !default;
+$ff-sans-condensed-black: 'SansCondensedBlack', 'Helvetica Neue', Helvetica, Arial, sans-serif !default;
+$ff-sans-condensed-bold: 'SansCondensedBold', 'Helvetica Neue', Helvetica, Arial, sans-serif !default;
+$ff-sans-regular-italic: 'SansItalic', 'Helvetica Neue', Helvetica, Arial, sans-serif !default;
+$ff-sans-light: 'SansLight', 'Helvetica Neue', Helvetica, Arial, sans-serif !default;
+$ff-sans-light-italic: 'SansLightItalic', 'Helvetica Neue', Helvetica, Arial, sans-serif !default;
+$ff-sans-medium: 'SansMedium', 'Helvetica Neue', Helvetica, Arial, sans-serif !default;
+$ff-sans-ultra-light: 'SansUltraLight', 'Helvetica Neue', Helvetica, Arial, sans-serif !default;
+$ff-sans-ultra-light-italic: 'SansUltraLightItalic', 'Helvetica Neue', Helvetica, Arial, sans-serif !default;
+$ff-serif-regular: Georgia, "Times New Roman", Times, serif !default;
+$ff-mono: Menlo, Monaco, Consolas, "Courier New", monospace !default;
+$ff-font-icon: FontAwesome;

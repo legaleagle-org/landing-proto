@@ -64,7 +64,7 @@ var dev = {
     /* image */
     image: {
         input: input + '/**/*.{png,jpg,svg,gif}',
-        output: output + '/image'
+        output: output + '/'
     },
 
     /* font */
