@@ -1,0 +1,90 @@
+#header-landing {
+    @include s-clearfix;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: r(4rem);
+    z-index: $z-header;
+
+    #header-brand {
+
+        position: relative;
+        float: left;
+        width: r(16rem);
+        height: 100%;
+        padding: 0 0 0 r(4rem);
+
+        .logo {
+            font-size: 12px;
+            line-height: x(1);
+            height: r(1rem);
+            margin: 0;
+        }
+    }
+}
+
+#nav-landing {
+
+    display: table;
+
+    position: relative;
+    right: r(4rem);
+    float: right;
+    height: 100%;
+
+    .nav-lists {
+
+        display: table-cell;
+        vertical-align: bottom;
+
+        list-style: none outside none;
+        margin: 0;
+        height: 100%;
+
+        .nav-item {
+            margin: 0;
+            padding: 0 0 0 r(4rem);
+            display: inline-block;
+            line-height: r(1rem);
+            height: r(1rem);
+        }
+
+        .nav-link {
+            display: block;
+            margin: 0;
+            font-size: r(1rem);
+            line-height: r(1rem);
+            height: r(1rem);
+            text-align: right;
+            letter-spacing: 0.06em;
+            font-family: $ff-sans-medium;
+
+            span {
+                position: relative;
+                pointer-events: none;
+                &:after {
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    bottom: r(-.5rem);
+                    left: 0;
+                    pointer-events: none;
+                    height: 1px;
+                    width: 100%;
+                    background-color: rgba( $white, 0 );
+
+                    @include s-transition( all .3s linear );
+                }
+            }
+
+            &:hover { color: $white; }
+
+            &.active span:after,
+            &:hover span:after {
+                @include s-transition( all .3s linear );
+                background-color: rgba( $white, 1 );
+            }
+        }
+    }
+}

@@ -35,15 +35,12 @@ $old: false;
 /* ------ {{ swiper v3.2.7 }} ------ */
 @import "vendor/swiper/swiper";
 
-/* ------ {{ focal-point v1.0.0 }} ------ */
-@import "vendor/focal-point/focal-point";
-
 /* ------ {{ legaleagle-landing v0.0.0 }} ------ */
 @import "module/common/element";
 @import "module/common/page";
-@import "module/common/nav";
-@import "module/common/button";
+@import "module/common/header";
 @import "module/common/background";
+@import "module/common/button";
 @import "module/landing/landing-layout";
 @import "module/landing/landing-intro";
 @import "module/landing/landing-testi";

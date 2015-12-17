@@ -19,7 +19,19 @@ if ( !landing.viewport.isLandscape() )
 
 dommon.ready( function() {
 
-    console.log( landing.viewport );
+    var _self = this;
 
-    this.swiper = landing.section.initSwiper();
+    var elNav = document.getElementById( 'nav-landing' )
+    ,   elNavLinks = elNav.querySelectorAll( '.nav-link' );
+
+    _self.swiper = landing.section.initSwiper( elNavLinks );
+
+    Array.prototype.forEach.call( elNavLinks, function( link, i ) {
+        link.addEventListener( 'click', function( e ) {
+            e.preventDefault();
+            var swipeTargetId = e.target.dataset.slideTo || 0;
+
+            landing.section.swipeTo( _self.swiper, swipeTargetId );
+        })
+    })
 });
