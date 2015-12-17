@@ -1,0 +1,27 @@
+#restrick-portrait {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 99999;
+    background-color: $black;
+
+    display: none;
+
+    & > .inner {
+        display: table-cell;
+        vertical-align: middle;
+    }
+
+    .restrick-portrait-headline {
+        text-align: center;
+        margin: 0;
+        font-family: $ff-sans-medium;
+    }
+
+    .restrick-portrait-byline {
+        text-align: center;
+        margin: 0;
+        font-family: $ff-sans-medium;
+    }
+}

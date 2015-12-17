@@ -13,7 +13,13 @@ __webpack_public_path__ =
 var dommon = require( './module/dommon' )
 ,   landing = require( './module/landing' );
 
+if ( !landing.viewport.isLandscape() )
+    document.getElementById( 'restrick-portrait' )
+        .style.display = 'table';
+
 dommon.ready( function() {
+
+    console.log( landing.viewport );
 
     this.swiper = landing.section.initSwiper();
 });
