@@ -6747,7 +6747,7 @@ button& {
 
 .inner .bg *[class^="bg-"] {
   position: relative;
-  float: left;
+  float: right;
 }
 
 .inner .bg .bg-12 {
@@ -6762,6 +6762,9 @@ button& {
   width: 25%;
   height: 100%;
   overflow: hidden;
+  -webkit-box-shadow: 1px 0px 4px 0px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 1px 0px 4px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: 1px 0px 4px 0px rgba(0, 0, 0, 0.5);
 }
 
 .inner .bg *[class^="bg-"] img.fp {
