@@ -1,0 +1,88 @@
+$dc-icon-dimension: r( 4rem );
+
+$dc-personal-bg-dark: #026291;
+$dc-personal-bg-light: #0296C3;
+$dc-business-bg-dark: #F9A21B;
+$dc-business-bg-light: #F1B260;
+$dc-asset-bg-dark: #532D88;
+$dc-asset-bg-light: #CF1777;
+
+@mixin dc-icon-bg-gradient( $stop1, $stop2 ) {
+    background: $stop1;
+    background: -moz-linear-gradient(-45deg, $stop1 0%, $stop2 100%);
+    background: -webkit-gradient(left top, right bottom, color-stop(0%, $stop1), color-stop(100%, $stop2));
+    background: -webkit-linear-gradient(-45deg, $stop1 0%, $stop2 100%);
+    background: -o-linear-gradient(-45deg, $stop1 0%, $stop2 100%);
+    background: -ms-linear-gradient(-45deg, $stop1 0%, $stop2 100%);
+    background: linear-gradient(135deg, $stop1 0%, $stop2 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$stop1}', endColorstr='#{$stop2}', GradientType=1 );
+}
+
+#landing-draft-cats {
+
+    position: relative;
+    @include s-translate-x( -50% );
+    left: 50%;
+    height: r( 8rem );
+    width: r( 36rem );
+
+    .landing-dc {
+        display: inline-block;
+        width: r( 8rem );
+        height: r( 8rem );
+        margin: 0 r(2rem);
+        position: relative;
+        color: $white;
+
+        .dc-icon {
+
+            display: block;
+            width: $dc-icon-dimension;
+            height: $dc-icon-dimension;
+            border-radius: 50%;
+
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin: r( -2rem ) 0 0 r( -2rem );
+        }
+
+        .dc-label {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: x(1);
+            width: 100%;
+
+            .text {
+                display: block;
+                height: x(1);
+                width: 100%;
+                margin: 0;
+                line-height: x(1);
+                font-size: x(1);
+                font-family: $ff-sans-light;
+                text-align: center;
+            }
+        }
+    }
+}
+
+.landing-dc[data-dc="personal"] .dc-icon { @include dc-icon-bg-gradient( $dc-personal-bg-light, $dc-personal-bg-dark ); }
+.landing-dc[data-dc="business"] .dc-icon { @include dc-icon-bg-gradient( $dc-business-bg-light, $dc-business-bg-dark ); }
+.landing-dc[data-dc="asset"] .dc-icon { @include dc-icon-bg-gradient( $dc-asset-bg-light, $dc-asset-bg-dark ); }
+
+#landing-draft.test {
+
+    #landing-draft-cats {
+        background-color: rgba( #F00, .1 );
+
+        .landing-dc {
+            background-color: rgba( #F00, .1 );
+
+            .dc-icon {
+                background-color: rgba( #F00, .1 );
+            }
+        }
+    }
+}
