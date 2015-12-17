@@ -32,15 +32,17 @@
             img.fp {
                 display: block;
                 position: absolute;
-                top: 0; left: 0;
+                top: 0;
             }
 
             img.fp-height {
+                left: 0; right: auto;
                 @media screen and (orientation: landscape) { height: 100%; width: auto; }
                 @media screen and (orientation: portrait) { width: 100%; height: auto; }
             }
 
             img.fp-width {
+                left: auto; right: 0;
                 @media screen and (orientation: landscape) { width: 100%; height: auto; }
                 @media screen and (orientation: portrait) {  height: 100%; width: auto;  }
             }
