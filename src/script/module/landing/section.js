@@ -16,10 +16,10 @@ Section.initSwiper = function( _links ) {
     });
 
     _self.currentSlide = _swiper.activeIndex;
-
     _self.updateLinks( _links );
 
     _swiper.on( 'slideChangeEnd', function () {
+        _self.currentSlide = _swiper.activeIndex;
         _self.updateLinks( _links );
     });
 
@@ -33,8 +33,6 @@ Section.swipeTo = function( _swiper, _id ) {
     _id = parseInt( _id, 10 );
 
     if ( _self.currentSlide === _id ) return;
-
-    _self.currentSlide = _id;
 
     _swiper.slideTo( _id, 300 );
 };
