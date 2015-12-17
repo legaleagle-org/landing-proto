@@ -6763,7 +6763,11 @@ button& {
   display: block;
   position: absolute;
   top: 0;
+}
+
+.inner .bg *[class^="bg-"] img.fp-height {
   left: 0;
+  right: auto;
 }
 
 @media screen and (orientation: landscape) {
@@ -6778,6 +6782,11 @@ button& {
     width: 100%;
     height: auto;
   }
+}
+
+.inner .bg *[class^="bg-"] img.fp-width {
+  left: auto;
+  right: 0;
 }
 
 @media screen and (orientation: landscape) {
