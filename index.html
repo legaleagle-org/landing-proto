@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html>
     <head>
+
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <meta name="theme-color" content="#000000">
+
         <title>Yo!</title>
         <link rel="icon" href="data:;base64,iVBORw0KGgo=">
         <style>
@@ -139,13 +146,6 @@
         <link rel="stylesheet" href="style/style.css">
     </head>
     <body>
-        <div id="restrick-preload"></div>
-        <div id="restrick-portrait">
-            <div class="inner">
-                <h1 class="restrick-portrait-headline">Currently this prototype doesn't support</h1>
-                <p class="restrick-portrait-byline">Mobile devices.</p>
-            </div>
-        </div>
 
         <header id="header-landing">
 
@@ -240,10 +240,16 @@
                     </div>
                 </section>
             </div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
         </div>
 
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
+        <div id="restrick-portrait-overlay">
+            <div class="inner">
+                <h1 class="restrick-portrait-headline">Currently this prototype doesn't support</h1>
+                <h3 class="restrick-portrait-byline">Mobile devices.</h3>
+            </div>
+        </div>
 
         <script>
             (function(){'use strict';var f,g=[];function l(a){g.push(a);1==g.length&&f()}function m(){for(;g.length;)g[0](),g.shift()}f=function(){setTimeout(m)};function n(a){this.a=p;this.b=void 0;this.f=[];var b=this;try{a(function(a){q(b,a)},function(a){r(b,a)})}catch(c){r(b,c)}}var p=2;function t(a){return new n(function(b,c){c(a)})}function u(a){return new n(function(b){b(a)})}function q(a,b){if(a.a==p){if(b==a)throw new TypeError;var c=!1;try{var d=b&&b.then;if(null!=b&&"object"==typeof b&&"function"==typeof d){d.call(b,function(b){c||q(a,b);c=!0},function(b){c||r(a,b);c=!0});return}}catch(e){c||r(a,e);return}a.a=0;a.b=b;v(a)}}
@@ -276,26 +282,9 @@
                 ,   fontL = new w.FontFaceObserver( "LESans", { weight: 100, style: 'italic', stretch: 'normal' });
 
                 w.Promise
-                    .all([
-                        fontA.check(),
-                        fontB.check(),
-                        fontC.check(),
-                        fontD.check(),
-                        fontE.check(),
-                        fontF.check(),
-                        fontG.check(),
-                        fontH.check(),
-                        fontI.check(),
-                        fontJ.check(),
-                        fontK.check(),
-                        fontL.check()
-                    ])
+                    .all([ fontA.check(), fontB.check(), fontC.check(), fontD.check(), fontE.check(), fontF.check(), fontG.check(), fontH.check(), fontI.check(), fontJ.check(), fontK.check(), fontL.check() ])
                     .then(function( res ){
-                        // console.log( res );
                         w.document.documentElement.className += " loaded";
-
-                        var preloadEl = document.getElementById('restrick-preload');
-                        window.setTimeout( function() { preloadEl.parentNode.removeChild(preloadEl); }, 2010 );
                     });
             }( this ));
         </script>

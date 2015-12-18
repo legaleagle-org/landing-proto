@@ -59,28 +59,30 @@
 	var dommon = __webpack_require__( 1 )
 	,   landing = __webpack_require__( 3 );
 
-	if ( !landing.viewport.isLandscape() )
-	    document.getElementById( 'restrick-portrait' )
-	        .style.display = 'table';
+	(function( _self ){
+	    if ( !landing.viewport.isLandscape() )
+	        document.getElementById( 'restrick-portrait-overlay' )
+	            .style.display = 'table';
 
-	dommon.ready( function() {
+	    dommon.ready( function() {
 
-	    var _self = this;
+	        var _self = this;
 
-	    var elNav = document.getElementById( 'nav-landing' )
-	    ,   elNavLinks = elNav.querySelectorAll( '.nav-link' );
+	        var elNav = document.getElementById( 'nav-landing' )
+	        ,   elNavLinks = elNav.querySelectorAll( '.nav-link' );
 
-	    _self.swiper = landing.section.initSwiper( elNavLinks );
+	        _self.swiper = landing.section.initSwiper( elNavLinks );
 
-	    Array.prototype.forEach.call( elNavLinks, function( link, i ) {
-	        link.addEventListener( 'click', function( e ) {
-	            e.preventDefault();
-	            var swipeTargetId = e.target.dataset.slideTo || 0;
+	        Array.prototype.forEach.call( elNavLinks, function( link, i ) {
+	            link.addEventListener( 'click', function( e ) {
+	                e.preventDefault();
+	                var swipeTargetId = e.target.dataset.slideTo || 0;
 
-	            landing.section.swipeTo( _self.swiper, swipeTargetId );
+	                landing.section.swipeTo( _self.swiper, swipeTargetId );
+	            })
 	        })
-	    })
-	});
+	    });
+	}( this ));
 
 /***/ },
 /* 1 */
