@@ -1,0 +1,25 @@
+$old: false;
+$font-url: '../font/';
+
+@import "base/setting";
+@import "base/color";
+@import "vendor/sirna/function/sirna-omit-unit.scss";
+@import "vendor/sirna/function/sirna-parse-int.scss";
+@import "vendor/sirna/function/sirna-rem-px.scss";
+@import "vendor/sirna/function/sirna-unit-scale.scss";
+@import "vendor/sirna/mixin/sirna-font-face";
+@import "vendor/sirna/mixin/sirna-font-icon";
+
+/*  */
+@include s-font-face( 'LESans', 'HelveticaNeueBold', $font-url, 600, normal, normal );
+@include s-font-face( 'LESans', 'HelveticaNeueBoldItalic', $font-url, 600, italic, normal );
+@include s-font-face( 'LESans', 'HelveticaNeueCondensedBold', $font-url, 600, normal, condensed );
+@include s-font-face( 'LESans', 'HelveticaNeueMedium', $font-url, 500, normal, normal );
+@include s-font-face( 'LESans', 'HelveticaNeue', $font-url, 400, normal, normal );
+@include s-font-face( 'LESans', 'HelveticaNeueItalic', $font-url, 400, italic, normal );
+@include s-font-face( 'LESans', 'HelveticaNeueLight', $font-url, 300, normal, normal );
+@include s-font-face( 'LESans', 'HelveticaNeueLightItalic', $font-url, 300, italic, normal );
+@include s-font-face( 'LESans', 'HelveticaNeueThin', $font-url, 200, normal, normal );
+@include s-font-face( 'LESans', 'HelveticaNeueThinItalic', $font-url, 200, italic, normal );
+@include s-font-face( 'LESans', 'HelveticaNeueUltraLight', $font-url, 100, normal, normal );
+@include s-font-face( 'LESans', 'HelveticaNeueUltraLightItalic', $font-url, 100, italic, normal );

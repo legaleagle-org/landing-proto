@@ -17,7 +17,7 @@ var gulp          = require( 'gulp' )
 ,   rename        = require( 'gulp-rename' )    /* Used by style:old */
 ;
 
-var file = 'style';
+var file = '*';
 
 gulp.task( 'style:modern', function() {
 
@@ -43,6 +43,7 @@ gulp.task( 'style:modern', function() {
 gulp.task( 'style:old', function() {
 
     var s = size();
+    var file = 'style';
 
     return gulp.src( config.style.input + '/' + file + '.scss' )
         .pipe( replace( /\$old\:\s*false;/g, function( str ) {

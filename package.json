@@ -21,6 +21,7 @@
   "homepage": "https://github.com/51124/legaleagle-landing-static#readme",
   "devDependencies": {
     "autoprefixer-loader": "^3.1.0",
+    "babel-core": "^6.3.17",
     "babel-loader": "^6.2.0",
     "bundle-loader": "^0.5.4",
     "css-loader": "^0.23.0",
@@ -59,6 +60,7 @@
     "gulp-usemin": "^0.3.16",
     "gulp-util": "^3.0.7",
     "html-loader": "^0.4.0",
+    "jshint": "^2.9.1-rc1",
     "jshint-stylish": "^2.1.0",
     "main-bower-files": "^2.9.0",
     "node.extend": "^1.1.5",
@@ -73,5 +75,8 @@
     "webpack-stream": "^3.1.0",
     "wiredep": "^3.0.0",
     "yargs": "^3.31.0"
+  },
+  "dependencies": {
+    "fontfaceobserver": "^1.6.2"
   }
 }

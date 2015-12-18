@@ -27,7 +27,7 @@
         position: relative;
         line-height: x(3);
         height: x(3);
-        font-family: $ff-sans-ultra-light;
+        @include ff-sans-ultra-light;
         font-size: r(3.375rem);
         letter-spacing: .03em;
         margin: 0;
@@ -42,7 +42,7 @@
 
             .dot-end {
                 position: relative;
-                font-family: $ff-sans-regular;
+                @include ff-sans-medium;
                 font-size: .5em;
             }
         }

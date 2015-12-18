@@ -1,9 +1,13 @@
-#restrick-portrait {
+@mixin restrick-layout {
     position: absolute;
     top: 0; left: 0;
     width: 100vw;
     height: 100vh;
-    z-index: 99999;
+}
+
+#restrick-portrait-overlay {
+    @include restrick-layout;
+    z-index: 99998;
     background-color: $black;
 
     display: none;
@@ -16,12 +20,12 @@
     .restrick-portrait-headline {
         text-align: center;
         margin: 0;
-        font-family: $ff-sans-medium;
+        @include ff-sans-medium;
     }
 
     .restrick-portrait-byline {
         text-align: center;
-        margin: 0;
-        font-family: $ff-sans-medium;
+        margin: x(1) 0 0 0;
+        @include ff-sans-medium;
     }
 }

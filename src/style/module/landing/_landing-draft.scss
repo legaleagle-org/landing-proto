@@ -60,8 +60,8 @@ $dc-asset-bg-light: #CF1777;
                 width: 100%;
                 margin: 0;
                 line-height: x(1);
+                @include ff-sans-light;
                 font-size: x(1);
-                font-family: $ff-sans-light;
                 text-align: center;
             }
         }

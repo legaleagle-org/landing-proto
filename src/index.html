@@ -1,8 +1,148 @@
 <!DOCTYPE html>
 <html>
     <head>
+
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <meta name="theme-color" content="#000000">
+
         <title>Yo!</title>
         <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+        <style>
+            @font-face {
+              font-family: "LESans";
+              src: url("font/HelveticaNeueBold.eot");
+              /* IE9 Compat Modes */
+              src: url("font/HelveticaNeueBold.eot?#iefix") format("embedded-opentype"), url("font/HelveticaNeueBold.woff") format("woff"), url("font/HelveticaNeueBold.ttf") format("truetype"), url("font/HelveticaNeueBold.svg") format("svg");
+              /* Legacy iOS */
+              font-style: normal;
+              font-weight: 600;
+              font-stretch: normal;
+            }
+
+            @font-face {
+              font-family: "LESans";
+              src: url("font/HelveticaNeueBoldItalic.eot");
+              /* IE9 Compat Modes */
+              src: url("font/HelveticaNeueBoldItalic.eot?#iefix") format("embedded-opentype"), url("font/HelveticaNeueBoldItalic.woff") format("woff"), url("font/HelveticaNeueBoldItalic.ttf") format("truetype"), url("font/HelveticaNeueBoldItalic.svg") format("svg");
+              /* Legacy iOS */
+              font-style: italic;
+              font-weight: 600;
+              font-stretch: normal;
+            }
+
+            @font-face {
+              font-family: "LESans";
+              src: url("font/HelveticaNeueCondensedBold.eot");
+              /* IE9 Compat Modes */
+              src: url("font/HelveticaNeueCondensedBold.eot?#iefix") format("embedded-opentype"), url("font/HelveticaNeueCondensedBold.woff") format("woff"), url("font/HelveticaNeueCondensedBold.ttf") format("truetype"), url("font/HelveticaNeueCondensedBold.svg") format("svg");
+              /* Legacy iOS */
+              font-style: normal;
+              font-weight: 600;
+              font-stretch: condensed;
+            }
+
+            @font-face {
+              font-family: "LESans";
+              src: url("font/HelveticaNeueMedium.eot");
+              /* IE9 Compat Modes */
+              src: url("font/HelveticaNeueMedium.eot?#iefix") format("embedded-opentype"), url("font/HelveticaNeueMedium.woff") format("woff"), url("font/HelveticaNeueMedium.ttf") format("truetype"), url("font/HelveticaNeueMedium.svg") format("svg");
+              /* Legacy iOS */
+              font-style: normal;
+              font-weight: 500;
+              font-stretch: normal;
+            }
+
+            @font-face {
+              font-family: "LESans";
+              src: url("font/HelveticaNeue.eot");
+              /* IE9 Compat Modes */
+              src: url("font/HelveticaNeue.eot?#iefix") format("embedded-opentype"), url("font/HelveticaNeue.woff") format("woff"), url("font/HelveticaNeue.ttf") format("truetype"), url("font/HelveticaNeue.svg") format("svg");
+              /* Legacy iOS */
+              font-style: normal;
+              font-weight: 400;
+              font-stretch: normal;
+            }
+
+            @font-face {
+              font-family: "LESans";
+              src: url("font/HelveticaNeueItalic.eot");
+              /* IE9 Compat Modes */
+              src: url("font/HelveticaNeueItalic.eot?#iefix") format("embedded-opentype"), url("font/HelveticaNeueItalic.woff") format("woff"), url("font/HelveticaNeueItalic.ttf") format("truetype"), url("font/HelveticaNeueItalic.svg") format("svg");
+              /* Legacy iOS */
+              font-style: italic;
+              font-weight: 400;
+              font-stretch: normal;
+            }
+
+            @font-face {
+              font-family: "LESans";
+              src: url("font/HelveticaNeueLight.eot");
+              /* IE9 Compat Modes */
+              src: url("font/HelveticaNeueLight.eot?#iefix") format("embedded-opentype"), url("font/HelveticaNeueLight.woff") format("woff"), url("font/HelveticaNeueLight.ttf") format("truetype"), url("font/HelveticaNeueLight.svg") format("svg");
+              /* Legacy iOS */
+              font-style: normal;
+              font-weight: 300;
+              font-stretch: normal;
+            }
+
+            @font-face {
+              font-family: "LESans";
+              src: url("font/HelveticaNeueLightItalic.eot");
+              /* IE9 Compat Modes */
+              src: url("font/HelveticaNeueLightItalic.eot?#iefix") format("embedded-opentype"), url("font/HelveticaNeueLightItalic.woff") format("woff"), url("font/HelveticaNeueLightItalic.ttf") format("truetype"), url("font/HelveticaNeueLightItalic.svg") format("svg");
+              /* Legacy iOS */
+              font-style: italic;
+              font-weight: 300;
+              font-stretch: normal;
+            }
+
+            @font-face {
+              font-family: "LESans";
+              src: url("font/HelveticaNeueThin.eot");
+              /* IE9 Compat Modes */
+              src: url("font/HelveticaNeueThin.eot?#iefix") format("embedded-opentype"), url("font/HelveticaNeueThin.woff") format("woff"), url("font/HelveticaNeueThin.ttf") format("truetype"), url("font/HelveticaNeueThin.svg") format("svg");
+              /* Legacy iOS */
+              font-style: normal;
+              font-weight: 200;
+              font-stretch: normal;
+            }
+
+            @font-face {
+              font-family: "LESans";
+              src: url("font/HelveticaNeueThinItalic.eot");
+              /* IE9 Compat Modes */
+              src: url("font/HelveticaNeueThinItalic.eot?#iefix") format("embedded-opentype"), url("font/HelveticaNeueThinItalic.woff") format("woff"), url("font/HelveticaNeueThinItalic.ttf") format("truetype"), url("font/HelveticaNeueThinItalic.svg") format("svg");
+              /* Legacy iOS */
+              font-style: italic;
+              font-weight: 200;
+              font-stretch: normal;
+            }
+
+            @font-face {
+              font-family: "LESans";
+              src: url("font/HelveticaNeueUltraLight.eot");
+              /* IE9 Compat Modes */
+              src: url("font/HelveticaNeueUltraLight.eot?#iefix") format("embedded-opentype"), url("font/HelveticaNeueUltraLight.woff") format("woff"), url("font/HelveticaNeueUltraLight.ttf") format("truetype"), url("font/HelveticaNeueUltraLight.svg") format("svg");
+              /* Legacy iOS */
+              font-style: normal;
+              font-weight: 100;
+              font-stretch: normal;
+            }
+
+            @font-face {
+              font-family: "LESans";
+              src: url("font/HelveticaNeueUltraLightItalic.eot");
+              /* IE9 Compat Modes */
+              src: url("font/HelveticaNeueUltraLightItalic.eot?#iefix") format("embedded-opentype"), url("font/HelveticaNeueUltraLightItalic.woff") format("woff"), url("font/HelveticaNeueUltraLightItalic.ttf") format("truetype"), url("font/HelveticaNeueUltraLightItalic.svg") format("svg");
+              /* Legacy iOS */
+              font-style: italic;
+              font-weight: 100;
+              font-stretch: normal;
+            }
+        </style>
         <link rel="stylesheet" href="style/style.css">
     </head>
     <body>
@@ -100,17 +240,54 @@
                     </div>
                 </section>
             </div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
         </div>
 
-        <div id="restrick-portrait">
+        <div id="restrick-portrait-overlay">
             <div class="inner">
                 <h1 class="restrick-portrait-headline">Currently this prototype doesn't support</h1>
-                <p class="restrick-portrait-byline">Mobile devices.</p>
+                <h3 class="restrick-portrait-byline">Mobile devices.</h3>
             </div>
         </div>
 
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
+        <script>
+            (function(){'use strict';var f,g=[];function l(a){g.push(a);1==g.length&&f()}function m(){for(;g.length;)g[0](),g.shift()}f=function(){setTimeout(m)};function n(a){this.a=p;this.b=void 0;this.f=[];var b=this;try{a(function(a){q(b,a)},function(a){r(b,a)})}catch(c){r(b,c)}}var p=2;function t(a){return new n(function(b,c){c(a)})}function u(a){return new n(function(b){b(a)})}function q(a,b){if(a.a==p){if(b==a)throw new TypeError;var c=!1;try{var d=b&&b.then;if(null!=b&&"object"==typeof b&&"function"==typeof d){d.call(b,function(b){c||q(a,b);c=!0},function(b){c||r(a,b);c=!0});return}}catch(e){c||r(a,e);return}a.a=0;a.b=b;v(a)}}
+            function r(a,b){if(a.a==p){if(b==a)throw new TypeError;a.a=1;a.b=b;v(a)}}function v(a){l(function(){if(a.a!=p)for(;a.f.length;){var b=a.f.shift(),c=b[0],d=b[1],e=b[2],b=b[3];try{0==a.a?"function"==typeof c?e(c.call(void 0,a.b)):e(a.b):1==a.a&&("function"==typeof d?e(d.call(void 0,a.b)):b(a.b))}catch(h){b(h)}}})}n.prototype.g=function(a){return this.c(void 0,a)};n.prototype.c=function(a,b){var c=this;return new n(function(d,e){c.f.push([a,b,d,e]);v(c)})};
+            function w(a){return new n(function(b,c){function d(c){return function(d){h[c]=d;e+=1;e==a.length&&b(h)}}var e=0,h=[];0==a.length&&b(h);for(var k=0;k<a.length;k+=1)u(a[k]).c(d(k),c)})}function x(a){return new n(function(b,c){for(var d=0;d<a.length;d+=1)u(a[d]).c(b,c)})};window.Promise||(window.Promise=n,window.Promise.resolve=u,window.Promise.reject=t,window.Promise.race=x,window.Promise.all=w,window.Promise.prototype.then=n.prototype.c,window.Promise.prototype["catch"]=n.prototype.g);}());
+
+            (function(){'use strict';function h(a){document.body?a():document.addEventListener("DOMContentLoaded",a)};function k(a){this.a=document.createElement("div");this.a.setAttribute("aria-hidden","true");this.a.appendChild(document.createTextNode(a));this.b=document.createElement("span");this.c=document.createElement("span");this.h=document.createElement("span");this.g=document.createElement("span");this.f=-1;this.b.style.cssText="display:inline-block;position:absolute;height:100%;width:100%;overflow:scroll;font-size:16px;";this.c.style.cssText="display:inline-block;position:absolute;height:100%;width:100%;overflow:scroll;font-size:16px;";
+            this.g.style.cssText="display:inline-block;position:absolute;height:100%;width:100%;overflow:scroll;font-size:16px;";this.h.style.cssText="display:inline-block;width:200%;height:200%;font-size:16px;";this.b.appendChild(this.h);this.c.appendChild(this.g);this.a.appendChild(this.b);this.a.appendChild(this.c)}
+            function w(a,b){a.a.style.cssText="min-width:20px;min-height:20px;display:inline-block;overflow:hidden;position:absolute;width:auto;margin:0;padding:0;top:-999px;left:-999px;white-space:nowrap;font:"+b+";"}function x(a){var b=a.a.offsetWidth,c=b+100;a.g.style.width=c+"px";a.c.scrollLeft=c;a.b.scrollLeft=a.b.scrollWidth+100;return a.f!==b?(a.f=b,!0):!1}
+            function y(a,b){a.b.addEventListener("scroll",function(){x(a)&&null!==a.a.parentNode&&b(a.f)},!1);a.c.addEventListener("scroll",function(){x(a)&&null!==a.a.parentNode&&b(a.f)},!1);x(a)};function z(a,b){var c=b||{};this.family=a;this.style=c.style||"normal";this.weight=c.weight||"normal";this.stretch=c.stretch||"normal"}var A=null,B=null,F=!!window.FontFace;function G(){if(null===B){var a=document.createElement("div");a.style.font="condensed 100px sans-serif";B=""!==a.style.font}return B}function H(a,b){return[a.style,a.weight,G()?a.stretch:"","100px",b].join(" ")}
+            z.prototype.a=function(a,b){var c=this,q=a||"BESbswy",C=b||3E3,D=Date.now();return new Promise(function(a,b){if(F){var p=function(){Date.now()-D>=C?b(c):document.fonts.load(H(c,c.family),q).then(function(b){1<=b.length?a(c):setTimeout(p,25)}).catch(function(){b(c)})};p()}else h(function(){function r(){var b;if(b=-1!=e&&-1!=f||-1!=e&&-1!=g||-1!=f&&-1!=g)(b=e!=f&&e!=g&&f!=g)||(null===A&&(b=/AppleWebKit\/([0-9]+)(?:\.([0-9]+))/.exec(window.navigator.userAgent),A=!!b&&(536>parseInt(b[1],10)||536===parseInt(b[1],
+            10)&&11>=parseInt(b[2],10))),b=A&&(e==t&&f==t&&g==t||e==u&&f==u&&g==u||e==v&&f==v&&g==v)),b=!b;b&&(null!==d.parentNode&&d.parentNode.removeChild(d),clearTimeout(E),a(c))}function p(){if(Date.now()-D>=C)null!==d.parentNode&&d.parentNode.removeChild(d),b(c);else{var a=document.hidden;if(!0===a||void 0===a)e=l.a.offsetWidth,f=m.a.offsetWidth,g=n.a.offsetWidth,r();E=setTimeout(p,50)}}var l=new k(q),m=new k(q),n=new k(q),e=-1,f=-1,g=-1,t=-1,u=-1,v=-1,d=document.createElement("div"),E=0;d.dir="ltr";w(l,
+            H(c,"sans-serif"));w(m,H(c,"serif"));w(n,H(c,"monospace"));d.appendChild(l.a);d.appendChild(m.a);d.appendChild(n.a);document.body.appendChild(d);t=l.a.offsetWidth;u=m.a.offsetWidth;v=n.a.offsetWidth;p();y(l,function(a){e=a;r()});w(l,H(c,'"'+c.family+'",sans-serif'));y(m,function(a){f=a;r()});w(m,H(c,'"'+c.family+'",serif'));y(n,function(a){g=a;r()});w(n,H(c,'"'+c.family+'",monospace'))})})};window.FontFaceObserver=z;window.FontFaceObserver.prototype.check=z.prototype.a;"undefined"!==typeof module&&(module.exports=window.FontFaceObserver);}());
+        </script>
+
+        <script>
+            (function( w ){
+                if ( w.document.documentElement.className.indexOf( "loaded" ) > -1 ) return;
+                var fontA = new w.FontFaceObserver( "LESans", { weight: 600, style: 'normal', stretch: 'normal' })
+                ,   fontB = new w.FontFaceObserver( "LESans", { weight: 600, style: 'italic', stretch: 'normal' })
+                ,   fontC = new w.FontFaceObserver( "LESans", { weight: 600, style: 'normal', stretch: 'condensed' })
+                ,   fontD = new w.FontFaceObserver( "LESans", { weight: 500, style: 'normal', stretch: 'normal' })
+                ,   fontE = new w.FontFaceObserver( "LESans", { weight: 400, style: 'normal', stretch: 'normal' })
+                ,   fontF = new w.FontFaceObserver( "LESans", { weight: 400, style: 'italic', stretch: 'normal' })
+                ,   fontG = new w.FontFaceObserver( "LESans", { weight: 300, style: 'normal', stretch: 'normal' })
+                ,   fontH = new w.FontFaceObserver( "LESans", { weight: 300, style: 'italic', stretch: 'normal' })
+                ,   fontI = new w.FontFaceObserver( "LESans", { weight: 200, style: 'normal', stretch: 'normal' })
+                ,   fontJ = new w.FontFaceObserver( "LESans", { weight: 200, style: 'italic', stretch: 'normal' })
+                ,   fontK = new w.FontFaceObserver( "LESans", { weight: 100, style: 'normal', stretch: 'normal' })
+                ,   fontL = new w.FontFaceObserver( "LESans", { weight: 100, style: 'italic', stretch: 'normal' });
+
+                w.Promise
+                    .all([ fontA.check(), fontB.check(), fontC.check(), fontD.check(), fontE.check(), fontF.check(), fontG.check(), fontH.check(), fontI.check(), fontJ.check(), fontK.check(), fontL.check() ])
+                    .then(function( res ){
+                        w.document.documentElement.className += " loaded";
+                    });
+            }( this ));
+        </script>
 
         <script src="script/lib/vendor.js"></script>
         <script src="script/app.js"></script>

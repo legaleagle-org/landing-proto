@@ -56,9 +56,9 @@
             font-size: r(1rem);
             line-height: r(1rem);
             height: r(1rem);
+            @include ff-sans-preload;
             text-align: right;
             letter-spacing: 0.06em;
-            font-family: $ff-sans-medium;
 
             span {
                 position: relative;
@@ -87,4 +87,10 @@
             }
         }
     }
+
+    @media screen and (orientation: portrait) { display: none; }
+}
+
+.loaded #nav-landing .nav-lists .nav-link {
+    @include ff-sans-light;
 }
