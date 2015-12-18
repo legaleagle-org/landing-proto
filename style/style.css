@@ -6527,7 +6527,20 @@ button& {
   float: left;
   width: 16rem;
   height: 100%;
-  padding: 0 0 0 4rem;
+}
+
+#header-landing #header-brand #legalEagle_logo_svg {
+  position: fixed;
+  bottom: auto;
+  top: 1.5rem;
+  left: 0;
+  margin: 0 0 0 4rem;
+}
+
+@media screen and (max-width: 767px) {
+  #header-landing #header-brand #legalEagle_logo_svg {
+    margin: 0 0 0 1rem;
+  }
 }
 
 #header-landing #header-brand .logo {
