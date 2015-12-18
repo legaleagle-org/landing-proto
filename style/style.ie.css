@@ -6979,8 +6979,6 @@ button& {
   transition: background-color 2s linear;
   z-index: 99999;
   background-color: black;
-  -webkit-filter: blur(5px);
-  filter: blur(5px);
   display: block;
 }
 
