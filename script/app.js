@@ -59,29 +59,49 @@
 	var dommon = __webpack_require__( 1 )
 	,   landing = __webpack_require__( 3 );
 
+	var elNavLinksWidth = 0;
+
 	(function( _self ){
-	    if ( !landing.viewport.isLandscape() )
-	        document.getElementById( 'restrick-portrait-overlay' )
-	            .style.display = 'table';
+
+	    // if ( !landing.viewport.isLandscape() )
+	    //     document.getElementById( 'restrick-portrait-overlay' )
+	    //         .style.display = 'table';
 
 	    dommon.ready( function() {
 
 	        var _self = this;
 
 	        var elNav = document.getElementById( 'nav-landing' )
-	        ,   elNavLinks = elNav.querySelectorAll( '.nav-link' );
+	        ,   elNavLinks = elNav.querySelectorAll( '.nav-link' )
+	        ,   elNavList = elNav.querySelectorAll( '.nav-lists' )[0];
 
 	        _self.swiper = landing.section.initSwiper( elNavLinks );
 
 	        Array.prototype.forEach.call( elNavLinks, function( link, i ) {
+
+	            elNavLinksWidth += link.offsetWidth
+
 	            link.addEventListener( 'click', function( e ) {
 	                e.preventDefault();
 	                var swipeTargetId = e.target.dataset.slideTo || 0;
 
 	                landing.section.swipeTo( _self.swiper, swipeTargetId );
 	            })
-	        })
+	        });
+
+	        updateMainNavLayout( elNavList, elNavLinksWidth );
 	    });
+
+	    function updateMainNavLayout( _el, _w ) {
+
+	        var elNavListPaddingSides = 0;
+
+	        if ( window.innerWidth <= 360 ) {
+	            elNavListPaddingSides = Math.floor( (window.innerWidth - _w) / 4 );
+	            _el.style.paddingLeft = elNavListPaddingSides + 'px';
+	        }
+	    }
+
 	}( this ));
 
 /***/ },
