@@ -6780,9 +6780,9 @@ button& {
   font-size: 14px;
   line-height: 24px;
   border-radius: 0;
-  color: #F00;
+  color: rgba(255, 255, 255, 0.6);
   background-color: transparent;
-  border-color: #FFF;
+  border-color: rgba(255, 255, 255, 0.6);
   font-family: "LESans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 500;
   font-style: normal;
@@ -6793,22 +6793,22 @@ button& {
 }
 
 .btn-le-primary-outline:hover {
-  color: #F00;
+  color: rgba(255, 255, 255, 0.6);
   background-color: transparent;
-  border-color: #e0e0e0;
+  border-color: rgba(224, 224, 224, 0.6);
 }
 
 .btn-le-primary-outline:focus, .btn-le-primary-outline.focus {
-  color: #F00;
+  color: rgba(255, 255, 255, 0.6);
   background-color: transparent;
-  border-color: #e0e0e0;
+  border-color: rgba(224, 224, 224, 0.6);
 }
 
 .btn-le-primary-outline:active, .btn-le-primary-outline.active,
 .open > .btn-le-primary-outline.dropdown-toggle {
-  color: #F00;
+  color: rgba(255, 255, 255, 0.6);
   background-color: transparent;
-  border-color: #e0e0e0;
+  border-color: rgba(224, 224, 224, 0.6);
   background-image: none;
 }
 
@@ -6816,19 +6816,19 @@ button& {
 .open > .btn-le-primary-outline.dropdown-toggle:hover,
 .open > .btn-le-primary-outline.dropdown-toggle:focus,
 .open > .btn-le-primary-outline.dropdown-toggle.focus {
-  color: #F00;
+  color: rgba(255, 255, 255, 0.6);
   background-color: transparent;
-  border-color: #bfbfbf;
+  border-color: rgba(191, 191, 191, 0.6);
 }
 
 .btn-le-primary-outline.disabled:focus, .btn-le-primary-outline.disabled.focus, .btn-le-primary-outline:disabled:focus, .btn-le-primary-outline:disabled.focus {
   background-color: transparent;
-  border-color: #FFF;
+  border-color: rgba(255, 255, 255, 0.6);
 }
 
 .btn-le-primary-outline.disabled:hover, .btn-le-primary-outline:disabled:hover {
   background-color: transparent;
-  border-color: #FFF;
+  border-color: rgba(255, 255, 255, 0.6);
 }
 
 .btn-le-primary-outline:hover {
@@ -6879,8 +6879,8 @@ button& {
 
 @media screen and (max-width: 767px) {
   .btn-le-primary-outline {
-    padding: 12px 12px;
-    font-size: 14px;
+    padding: 6px 6px;
+    font-size: 12px;
     line-height: 24px;
     border-radius: 0;
   }
@@ -6888,20 +6888,25 @@ button& {
 
 #landing-sections .landing-section {
   display: table;
-  width: 100%;
-  height: 100%;
-  max-width: 100%;
-  max-height: 100%;
-  width: 100%;
-  height: 100%;
+  max-width: 100vw;
+  max-height: 100vh;
+  width: 100vw;
+  height: 100vh;
   overflow: hidden;
 }
 
 #landing-sections .landing-section > .inner {
   position: relative;
+  width: 100%;
   display: table-cell;
   vertical-align: middle;
   padding: 0 64px;
+}
+
+@media screen and (max-width: 767px) {
+  #landing-sections .landing-section > .inner {
+    padding: 0;
+  }
 }
 
 #landing-sections .landing-headline {
@@ -6920,8 +6925,8 @@ button& {
 
 @media screen and (max-width: 767px) {
   #landing-sections .landing-headline {
-    font-size: 24px;
-    line-height: 24px;
+    font-size: 32px;
+    line-height: 32px;
     height: auto;
     text-align: center;
   }
@@ -6989,6 +6994,15 @@ button& {
   left: 50%;
   height: 128px;
   width: 576px;
+  margin: 0;
+}
+
+@media screen and (max-width: 767px) {
+  #landing-draft-cats {
+    width: 240px;
+    height: 64px;
+    margin: 24px 0 0 0;
+  }
 }
 
 #landing-draft-cats .landing-dc {
@@ -6998,6 +7012,14 @@ button& {
   margin: 0 32px;
   position: relative;
   color: #FFF;
+}
+
+@media screen and (max-width: 767px) {
+  #landing-draft-cats .landing-dc {
+    width: 64px;
+    height: 64px;
+    margin: 0 8px;
+  }
 }
 
 #landing-draft-cats .landing-dc .dc-icon {
@@ -7011,12 +7033,26 @@ button& {
   margin: -32px 0 0 -32px;
 }
 
+@media screen and (max-width: 767px) {
+  #landing-draft-cats .landing-dc .dc-icon {
+    width: 48px;
+    height: 48px;
+    margin: -24px 0 0 -24px;
+  }
+}
+
 #landing-draft-cats .landing-dc .dc-label {
   position: absolute;
   bottom: 0;
   left: 0;
   height: 24px;
   width: 100%;
+}
+
+@media screen and (max-width: 767px) {
+  #landing-draft-cats .landing-dc .dc-label {
+    bottom: -24px;
+  }
 }
 
 #landing-draft-cats .landing-dc .dc-label .text {
@@ -7031,6 +7067,12 @@ button& {
   font-stretch: normal;
   font-size: 24px;
   text-align: center;
+}
+
+@media screen and (max-width: 767px) {
+  #landing-draft-cats .landing-dc .dc-label .text {
+    font-size: 12px;
+  }
 }
 
 .landing-dc[data-dc="personal"] .dc-icon {
