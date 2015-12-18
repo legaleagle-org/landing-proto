@@ -14,126 +14,6 @@
 /* |_______/    |__| | _| `._____||__| \__| /__/     \__\  */
 /* ------ {{ sirna:function v1.3.0 }} ------ */
 /* ------ {{ sirna:mixin v1.3.0 }} ------ */
-@font-face {
-  font-family: "SansRegular";
-  src: url("../font/HelveticaNeue.eot");
-  /* IE9 Compat Modes */
-  src: url("../font/HelveticaNeue.eot?#iefix") format("embedded-opentype"), url("../font/HelveticaNeue.woff") format("woff"), url("../font/HelveticaNeue.ttf") format("truetype"), url("../font/HelveticaNeue.svg") format("svg");
-  /* Legacy iOS */
-  font-style: normal;
-  font-weight: normal;
-}
-
-@font-face {
-  font-family: "SansBold";
-  src: url("../font/HelveticaNeueBold.eot");
-  /* IE9 Compat Modes */
-  src: url("../font/HelveticaNeueBold.eot?#iefix") format("embedded-opentype"), url("../font/HelveticaNeueBold.woff") format("woff"), url("../font/HelveticaNeueBold.ttf") format("truetype"), url("../font/HelveticaNeueBold.svg") format("svg");
-  /* Legacy iOS */
-  font-style: normal;
-  font-weight: normal;
-}
-
-@font-face {
-  font-family: "SansBoldItalic";
-  src: url("../font/HelveticaNeueBoldItalic.eot");
-  /* IE9 Compat Modes */
-  src: url("../font/HelveticaNeueBoldItalic.eot?#iefix") format("embedded-opentype"), url("../font/HelveticaNeueBoldItalic.woff") format("woff"), url("../font/HelveticaNeueBoldItalic.ttf") format("truetype"), url("../font/HelveticaNeueBoldItalic.svg") format("svg");
-  /* Legacy iOS */
-  font-style: normal;
-  font-weight: normal;
-}
-
-@font-face {
-  font-family: "SansCondensedBlack";
-  src: url("../font/HelveticaNeueCondensedBlack.eot");
-  /* IE9 Compat Modes */
-  src: url("../font/HelveticaNeueCondensedBlack.eot?#iefix") format("embedded-opentype"), url("../font/HelveticaNeueCondensedBlack.woff") format("woff"), url("../font/HelveticaNeueCondensedBlack.ttf") format("truetype"), url("../font/HelveticaNeueCondensedBlack.svg") format("svg");
-  /* Legacy iOS */
-  font-style: normal;
-  font-weight: normal;
-}
-
-@font-face {
-  font-family: "SansCondensedBold";
-  src: url("../font/HelveticaNeueCondensedBold.eot");
-  /* IE9 Compat Modes */
-  src: url("../font/HelveticaNeueCondensedBold.eot?#iefix") format("embedded-opentype"), url("../font/HelveticaNeueCondensedBold.woff") format("woff"), url("../font/HelveticaNeueCondensedBold.ttf") format("truetype"), url("../font/HelveticaNeueCondensedBold.svg") format("svg");
-  /* Legacy iOS */
-  font-style: normal;
-  font-weight: normal;
-}
-
-@font-face {
-  font-family: "SansItalic";
-  src: url("../font/HelveticaNeueItalic.eot");
-  /* IE9 Compat Modes */
-  src: url("../font/HelveticaNeueItalic.eot?#iefix") format("embedded-opentype"), url("../font/HelveticaNeueItalic.woff") format("woff"), url("../font/HelveticaNeueItalic.ttf") format("truetype"), url("../font/HelveticaNeueItalic.svg") format("svg");
-  /* Legacy iOS */
-  font-style: normal;
-  font-weight: normal;
-}
-
-@font-face {
-  font-family: "SansLight";
-  src: url("../font/HelveticaNeueLight.eot");
-  /* IE9 Compat Modes */
-  src: url("../font/HelveticaNeueLight.eot?#iefix") format("embedded-opentype"), url("../font/HelveticaNeueLight.woff") format("woff"), url("../font/HelveticaNeueLight.ttf") format("truetype"), url("../font/HelveticaNeueLight.svg") format("svg");
-  /* Legacy iOS */
-  font-style: normal;
-  font-weight: normal;
-}
-
-@font-face {
-  font-family: "SansLightItalic";
-  src: url("../font/HelveticaNeueLightItalic.eot");
-  /* IE9 Compat Modes */
-  src: url("../font/HelveticaNeueLightItalic.eot?#iefix") format("embedded-opentype"), url("../font/HelveticaNeueLightItalic.woff") format("woff"), url("../font/HelveticaNeueLightItalic.ttf") format("truetype"), url("../font/HelveticaNeueLightItalic.svg") format("svg");
-  /* Legacy iOS */
-  font-style: normal;
-  font-weight: normal;
-}
-
-@font-face {
-  font-family: "SansMedium";
-  src: url("../font/HelveticaNeueMedium.eot");
-  /* IE9 Compat Modes */
-  src: url("../font/HelveticaNeueMedium.eot?#iefix") format("embedded-opentype"), url("../font/HelveticaNeueMedium.woff") format("woff"), url("../font/HelveticaNeueMedium.ttf") format("truetype"), url("../font/HelveticaNeueMedium.svg") format("svg");
-  /* Legacy iOS */
-  font-style: normal;
-  font-weight: normal;
-}
-
-@font-face {
-  font-family: "SansUltraLight";
-  src: url("../font/HelveticaNeueUltraLight.eot");
-  /* IE9 Compat Modes */
-  src: url("../font/HelveticaNeueUltraLight.eot?#iefix") format("embedded-opentype"), url("../font/HelveticaNeueUltraLight.woff") format("woff"), url("../font/HelveticaNeueUltraLight.ttf") format("truetype"), url("../font/HelveticaNeueUltraLight.svg") format("svg");
-  /* Legacy iOS */
-  font-style: normal;
-  font-weight: normal;
-}
-
-@font-face {
-  font-family: "SansUltraLightItalic";
-  src: url("../font/HelveticaNeueUltraLightItalic.eot");
-  /* IE9 Compat Modes */
-  src: url("../font/HelveticaNeueUltraLightItalic.eot?#iefix") format("embedded-opentype"), url("../font/HelveticaNeueUltraLightItalic.woff") format("woff"), url("../font/HelveticaNeueUltraLightItalic.ttf") format("truetype"), url("../font/HelveticaNeueUltraLightItalic.svg") format("svg");
-  /* Legacy iOS */
-  font-style: normal;
-  font-weight: normal;
-}
-
-@font-face {
-  font-family: "FontAwesome";
-  src: url("../font/fontawesome-webfont.eot");
-  /* IE9 Compat Modes */
-  src: url("../font/fontawesome-webfont.eot?#iefix") format("embedded-opentype"), url("../font/fontawesome-webfont.woff") format("woff"), url("../font/fontawesome-webfont.ttf") format("truetype"), url("../font/fontawesome-webfont.svg") format("svg");
-  /* Legacy iOS */
-  font-style: normal;
-  font-weight: normal;
-}
-
 /* ------ {{ twbs v4-alpha }} ------ */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 html {
@@ -392,7 +272,7 @@ html {
 }
 
 body {
-  font-family: "SansRegular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "LESans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 1rem;
   line-height: 1.5;
   color: #FFF;
@@ -5027,7 +4907,7 @@ button.close {
   position: absolute;
   z-index: 1070;
   display: block;
-  font-family: "SansRegular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "LESans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-style: normal;
   font-weight: normal;
   letter-spacing: normal;
@@ -5127,7 +5007,7 @@ button.close {
   display: block;
   max-width: 276px;
   padding: 1px;
-  font-family: "SansRegular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "LESans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-style: normal;
   font-weight: normal;
   letter-spacing: normal;
@@ -6690,9 +6570,12 @@ button& {
   font-size: 16px;
   line-height: 16px;
   height: 16px;
+  font-family: "LESans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
   text-align: right;
   letter-spacing: 0.06em;
-  font-family: "SansMedium", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 #nav-landing .nav-lists .nav-link span {
@@ -6835,8 +6718,11 @@ button& {
   color: #FFF;
   background-color: transparent;
   border-color: #FFF;
+  font-family: "LESans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
   text-transform: uppercase;
-  font-family: "SansMedium", "Helvetica Neue", Helvetica, Arial, sans-serif;
   letter-spacing: 0.1em;
   border-width: 1px;
 }
@@ -6948,7 +6834,10 @@ button& {
   position: relative;
   line-height: 72px;
   height: 72px;
-  font-family: "SansUltraLight", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "LESans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 100;
+  font-style: normal;
+  font-stretch: normal;
   font-size: 54px;
   letter-spacing: .03em;
   margin: 0;
@@ -6965,7 +6854,10 @@ button& {
 
 #landing-sections .landing-headline > .text .dot-end {
   position: relative;
-  font-family: "SansRegular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "LESans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
   font-size: .5em;
 }
 
@@ -7021,8 +6913,11 @@ button& {
   width: 100%;
   margin: 0;
   line-height: 24px;
+  font-family: "LESans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal;
   font-size: 24px;
-  font-family: "SansLight", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-align: center;
 }
 
@@ -7071,13 +6966,40 @@ button& {
   background-color: rgba(255, 0, 0, 0.1);
 }
 
+#restrick-preload {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  -webkit-transition: background-color 2s linear;
+  -moz-transition: background-color 2s linear;
+  -ms-transition: background-color 2s linear;
+  -o-transition: background-color 2s linear;
+  transition: background-color 2s linear;
+  z-index: 99999;
+  background-color: black;
+  -webkit-filter: blur(5px);
+  filter: blur(5px);
+  display: block;
+}
+
+.loaded #restrick-preload {
+  -webkit-transition: background-color 2s linear;
+  -moz-transition: background-color 2s linear;
+  -ms-transition: background-color 2s linear;
+  -o-transition: background-color 2s linear;
+  transition: background-color 2s linear;
+  background-color: transparent;
+}
+
 #restrick-portrait {
   position: absolute;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  z-index: 99999;
+  z-index: 99998;
   background-color: #000;
   display: none;
 }
@@ -7090,13 +7012,19 @@ button& {
 #restrick-portrait .restrick-portrait-headline {
   text-align: center;
   margin: 0;
-  font-family: "SansMedium", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "LESans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
 }
 
 #restrick-portrait .restrick-portrait-byline {
   text-align: center;
   margin: 0;
-  font-family: "SansMedium", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "LESans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
 }
 
 /*# sourceMappingURL=maps/style.css.map */
