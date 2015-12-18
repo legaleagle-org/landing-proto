@@ -6780,7 +6780,7 @@ button& {
   font-size: 14px;
   line-height: 24px;
   border-radius: 0;
-  color: #FFF;
+  color: #F00;
   background-color: transparent;
   border-color: #FFF;
   font-family: "LESans", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -6793,20 +6793,20 @@ button& {
 }
 
 .btn-le-primary-outline:hover {
-  color: #FFF;
+  color: #F00;
   background-color: transparent;
   border-color: #e0e0e0;
 }
 
 .btn-le-primary-outline:focus, .btn-le-primary-outline.focus {
-  color: #FFF;
+  color: #F00;
   background-color: transparent;
   border-color: #e0e0e0;
 }
 
 .btn-le-primary-outline:active, .btn-le-primary-outline.active,
 .open > .btn-le-primary-outline.dropdown-toggle {
-  color: #FFF;
+  color: #F00;
   background-color: transparent;
   border-color: #e0e0e0;
   background-image: none;
@@ -6816,7 +6816,7 @@ button& {
 .open > .btn-le-primary-outline.dropdown-toggle:hover,
 .open > .btn-le-primary-outline.dropdown-toggle:focus,
 .open > .btn-le-primary-outline.dropdown-toggle.focus {
-  color: #FFF;
+  color: #F00;
   background-color: transparent;
   border-color: #bfbfbf;
 }
@@ -6920,8 +6920,9 @@ button& {
 
 @media screen and (max-width: 767px) {
   #landing-sections .landing-headline {
-    font-size: 36px;
-    line-height: 36px;
+    font-size: 24px;
+    line-height: 24px;
+    height: auto;
     text-align: center;
   }
 }
@@ -6969,6 +6970,7 @@ button& {
 @media screen and (max-width: 767px) {
   #landing-sections .landing-section > .inner .btn {
     left: 50%;
+    margin-top: 12px;
     -moz-transform: translateX(-50%);
     -o-transform: translateX(-50%);
     -ms-transform: translateX(-50%);

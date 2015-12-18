@@ -6735,7 +6735,7 @@ button& {
   font-size: 0.875rem;
   line-height: 1.5rem;
   border-radius: 0;
-  color: #FFF;
+  color: #F00;
   background-color: transparent;
   border-color: #FFF;
   font-family: "LESans", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -6748,20 +6748,20 @@ button& {
 }
 
 .btn-le-primary-outline:hover {
-  color: #FFF;
+  color: #F00;
   background-color: transparent;
   border-color: #e0e0e0;
 }
 
 .btn-le-primary-outline:focus, .btn-le-primary-outline.focus {
-  color: #FFF;
+  color: #F00;
   background-color: transparent;
   border-color: #e0e0e0;
 }
 
 .btn-le-primary-outline:active, .btn-le-primary-outline.active,
 .open > .btn-le-primary-outline.dropdown-toggle {
-  color: #FFF;
+  color: #F00;
   background-color: transparent;
   border-color: #e0e0e0;
   background-image: none;
@@ -6771,7 +6771,7 @@ button& {
 .open > .btn-le-primary-outline.dropdown-toggle:hover,
 .open > .btn-le-primary-outline.dropdown-toggle:focus,
 .open > .btn-le-primary-outline.dropdown-toggle.focus {
-  color: #FFF;
+  color: #F00;
   background-color: transparent;
   border-color: #bfbfbf;
 }
@@ -6875,8 +6875,9 @@ button& {
 
 @media screen and (max-width: 767px) {
   #landing-sections .landing-headline {
-    font-size: 2.25rem;
-    line-height: 2.25rem;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    height: auto;
     text-align: center;
   }
 }
@@ -6921,6 +6922,7 @@ button& {
 @media screen and (max-width: 767px) {
   #landing-sections .landing-section > .inner .btn {
     left: 50%;
+    margin-top: 0.75rem;
     -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
   }
