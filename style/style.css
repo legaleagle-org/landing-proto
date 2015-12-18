@@ -6832,6 +6832,15 @@ button& {
   border-color: #FFF;
 }
 
+@media screen and (max-width: 767px) {
+  .btn-le-primary-outline {
+    padding: 0.75rem 0.75rem;
+    font-size: 0.875rem;
+    line-height: 1.5rem;
+    border-radius: 0;
+  }
+}
+
 #landing-sections .landing-section {
   display: table;
   width: 100%;
@@ -6864,12 +6873,32 @@ button& {
   pointer-events: none;
 }
 
+@media screen and (max-width: 767px) {
+  #landing-sections .landing-headline {
+    font-size: 2.25rem;
+    line-height: 2.25rem;
+    text-align: center;
+  }
+}
+
 #landing-sections .landing-headline.align-center {
   text-align: center;
 }
 
 #landing-sections .landing-headline > .text {
   position: relative;
+}
+
+#landing-sections .landing-headline > .text .line {
+  display: inline;
+  width: auto;
+}
+
+@media screen and (max-width: 767px) {
+  #landing-sections .landing-headline > .text .line {
+    display: block;
+    width: 100%;
+  }
 }
 
 #landing-sections .landing-headline > .text .dot-end {
@@ -6885,6 +6914,16 @@ button& {
   position: relative;
   left: 8px;
   margin-top: 1.5rem;
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+}
+
+@media screen and (max-width: 767px) {
+  #landing-sections .landing-section > .inner .btn {
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+  }
 }
 
 #landing-draft-cats {
