@@ -20,6 +20,18 @@
 
         // Init main navigation
         landing.section.initNav( _self.swiper, elNavLinks );
+
+        // Background Elements
+        var elBg = document.querySelectorAll('.bg-img');
+
+        // Init imagesloaded js
+        this.il = new imagesLoaded(
+            elBg,
+            function( instance ) {
+                console.log( instance );
+            }
+        );
+
     });
 
 }( this ));

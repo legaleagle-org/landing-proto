@@ -1,5 +1,5 @@
 // ----------------------------------------------------------------------------\
-// Compass Typography.
+// Typography.
 // ----------------------------------------------------------------------------/
 
 $base-font-size: 16px;
@@ -19,3 +19,9 @@ $min-line-padding: 2px !default;
 $base-rhythm-unit: $base-line-height / $base-font-size * $font-unit;
 $base-leader: ($base-line-height - $base-font-size) * $font-unit / $base-font-size;
 $base-half-leader: $base-leader / 2;
+
+// ----------------------------------------------------------------------------\
+// Breakpoints.
+// ----------------------------------------------------------------------------/
+
+$point-1: 767px; // iPad 3 width

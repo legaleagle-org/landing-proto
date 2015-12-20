@@ -11,21 +11,33 @@
         *[class^="bg-"] {
             position: relative;
             float: right;
+            overflow: hidden;
+            max-height: 100%;
+            height: 100%;
         }
 
         .bg-12 {
             max-width: 100%;
             width: 100%;
-            height: 100%;
-            overflow: hidden;
         }
 
         .bg-4 {
-            max-width: 25%;
-            width: 25%;
-            height: 100%;
-            overflow: hidden;
+            @include orientation-landscape() {
+                max-width: 25%;
+                width: 25%;
+                max-height: 100%;
+                height: 100%;
+            }
+            @include orientation-portrait() {
+                max-width: 100%;
+                width: 100%;
+                max-height: 25%;
+                height: 25%;
+                float: left;
+            }
+        }
 
+        .use-shadow {
             -webkit-box-shadow: 1px 0px 4px 0px rgba(0,0,0,.5);
             -moz-box-shadow: 1px 0px 4px 0px rgba(0,0,0,.5);
             box-shadow: 1px 0px 4px 0px rgba(0,0,0,.5);
@@ -33,28 +45,23 @@
 
         *[class^="bg-"] {
 
-            img.fp {
+            img {
                 display: block;
                 position: absolute;
                 top: 0;
+                width: 100%;
+                height: auto;
             }
 
-            img.fp-height {
-                left: 0; right: auto;
-                @media screen and (orientation: landscape) { height: 100%; width: auto; }
-                @media screen and (orientation: portrait) { width: 100%; height: auto; }
-            }
-
-            img.fp-width {
-                left: auto; right: 0;
-                @media screen and (orientation: landscape) { width: 100%; height: auto; }
-                @media screen and (orientation: portrait) {  height: 100%; width: auto;  }
-            }
-
-            img.zoom-scale {
+            img.use-zoom {
                 @include s-transition( all 3s ease-out );
                 &:hover { @include s-scale( 1.1 ); }
             }
         }
     }
+}
+
+.bg-img {
+    width: 1px !important;
+    height: 1px !important;
 }

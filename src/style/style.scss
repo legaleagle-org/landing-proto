@@ -21,6 +21,7 @@ $old: false;
 @import "vendor/sirna/mixin/sirna-transform";
 @import "vendor/sirna/mixin/sirna-transition";
 @import "vendor/sirna/mixin/sirna-animate";
+@import "vendor/sirna/mixin/sirna-rwd";
 
 @import "base/font";
 
@@ -36,7 +37,6 @@ $old: false;
 @import "vendor/swiper/swiper";
 
 /* ------ {{ legaleagle-landing v0.0.0 }} ------ */
-@import "module/common/rwd";
 @import "module/common/element";
 @import "module/common/page";
 @import "module/common/header";
