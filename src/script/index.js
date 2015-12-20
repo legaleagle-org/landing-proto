@@ -4,36 +4,22 @@
 *
 */
 
-__webpack_public_path__ =
-    ( ( location.protocol === 'https:' ) ? 'https://' : 'http://' )
-    + window.location.host
-    + '/public/script/'
-;
-
-var dommon = require( './module/dommon' )
-,   landing = require( './module/landing' );
-
 (function( _self ){
-    if ( !landing.viewport.isLandscape() )
-        document.getElementById( 'restrick-portrait-overlay' )
-            .style.display = 'table';
+
+    var dommon = require( './module/dommon' )
+    ,   landing = require( './module/landing' );
 
     dommon.ready( function() {
 
-        var _self = this;
-
+        // Navigation Elements
         var elNav = document.getElementById( 'nav-landing' )
         ,   elNavLinks = elNav.querySelectorAll( '.nav-link' );
 
+        // Init Swiper JS
         _self.swiper = landing.section.initSwiper( elNavLinks );
 
-        Array.prototype.forEach.call( elNavLinks, function( link, i ) {
-            link.addEventListener( 'click', function( e ) {
-                e.preventDefault();
-                var swipeTargetId = e.target.dataset.slideTo || 0;
-
-                landing.section.swipeTo( _self.swiper, swipeTargetId );
-            })
-        })
+        // Init main navigation
+        landing.section.initNav( _self.swiper, elNavLinks );
     });
+
 }( this ));

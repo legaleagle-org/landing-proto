@@ -29,10 +29,14 @@
     "verge": "~1.9.1",
     "imagesloaded": "~3.2.0",
     "bootstrap": "v4.0.0-alpha.2",
-    "Swiper": "swiper#~3.2.7"
+    "Swiper": "swiper#~3.2.7",
+    "picturefill": "~3.0.1"
   },
   "overrides": {
     "bootstrap": {
+      "ignore": true
+    },
+    "picturefill": {
       "ignore": true
     }
   }

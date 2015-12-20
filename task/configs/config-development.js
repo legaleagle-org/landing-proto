@@ -48,6 +48,10 @@ var dev = {
                 filter: '**/*.js'
             },
             output: output + '/script/lib'
+        },
+        standalone: {
+            paths: input + '/script/vendor',
+            output: output + '/script/lib'
         }
     },
 

@@ -21,7 +21,7 @@ gulp.task( 'webpack', function() {
 
     var s = size();
 
-    return gulp.src( config.webpack.input + '/core/boot.js' )
+    return gulp.src( config.webpack.input + '/index.js' )
         .pipe( webpack(
             webpackConfig,
             null,

@@ -1,4 +1,5 @@
 $dc-icon-dimension: r( 4rem );
+$dc-icon-dimension-bp-1: r( 3rem );
 
 $dc-personal-bg-dark: #026291;
 $dc-personal-bg-light: #0296C3;
@@ -25,6 +26,13 @@ $dc-asset-bg-light: #CF1777;
     left: 50%;
     height: r( 8rem );
     width: r( 36rem );
+    margin: 0;
+
+    @include break( $point-1 ) {
+        width: r( 15rem );
+        height: r( 4rem );
+        margin: x(1) 0 0 0;
+    }
 
     .landing-dc {
         display: inline-block;
@@ -33,6 +41,12 @@ $dc-asset-bg-light: #CF1777;
         margin: 0 r(2rem);
         position: relative;
         color: $white;
+
+        @include break( $point-1 ) {
+            width: r( 4rem );
+            height: r( 4rem );
+            margin: 0 r(.5rem);
+        }
 
         .dc-icon {
 
@@ -45,6 +59,12 @@ $dc-asset-bg-light: #CF1777;
             top: 50%;
             left: 50%;
             margin: r( -2rem ) 0 0 r( -2rem );
+
+            @include break( $point-1 ) {
+                width: $dc-icon-dimension-bp-1;
+                height: $dc-icon-dimension-bp-1;
+                margin: r( -1.5rem ) 0 0 r( -1.5rem );
+            }
         }
 
         .dc-label {
@@ -53,6 +73,10 @@ $dc-asset-bg-light: #CF1777;
             left: 0;
             height: x(1);
             width: 100%;
+
+            @include break( $point-1 ) {
+                bottom: x(-1);
+            }
 
             .text {
                 display: block;
@@ -63,6 +87,10 @@ $dc-asset-bg-light: #CF1777;
                 @include ff-sans-light;
                 font-size: x(1);
                 text-align: center;
+
+                @include break( $point-1 ) {
+                    font-size: x(.5);
+                }
             }
         }
     }

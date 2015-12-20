@@ -26,6 +26,21 @@ Section.initSwiper = function( _links ) {
     return _swiper;
 }
 
+Section.initNav = function( swiper, navLinks ) {
+
+    var _self = this;
+
+    Array.prototype.forEach.call( navLinks, function( link, i ) {
+
+        link.addEventListener( 'click', function( e ) {
+            e.preventDefault();
+            var swipeTargetId = e.target.dataset.slideTo || 0;
+
+            _self.swipeTo( swiper, swipeTargetId );
+        })
+    });
+}
+
 Section.swipeTo = function( _swiper, _id ) {
 
     var _self = this;

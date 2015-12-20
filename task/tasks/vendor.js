@@ -25,6 +25,13 @@ gulp.task( 'vendor', [ 'vendor:clean' ], function() {
     ;
 });
 
+// gulp.task( 'vendor:standalone', function() {
+
+//     var s = size();
+
+//     return gul
+// });
+
 gulp.task( 'vendor:clean', function() {
     return del( [ config.vendor.mainBowerFile.output ] );
 });

@@ -2,10 +2,13 @@
     @include s-clearfix;
     position: absolute;
     top: 0;
+    bottom: auto;
     left: 0;
     width: 100vw;
     height: r(4rem);
     z-index: $z-header;
+
+    @include break( $point-1 ) { bottom: 0; top: auto; }
 
     #header-brand {
 
@@ -13,7 +16,16 @@
         float: left;
         width: r(16rem);
         height: 100%;
-        padding: 0 0 0 r(4rem);
+
+        #legalEagle_logo_svg {
+            position: fixed;
+            bottom: auto; top: x(1); left: 0;
+            margin: 0 0 0 r(4rem);
+
+            @include break( $point-1 ) {
+                margin: 0 0 0 r(1rem);
+            }
+        }
 
         .logo {
             font-size: 12px;
@@ -32,6 +44,14 @@
     right: r(4rem);
     float: right;
     height: 100%;
+    width: auto;
+
+    @include break( $point-1 ) {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 100vw;
+    }
 
     .nav-lists {
 
@@ -41,6 +61,14 @@
         list-style: none outside none;
         margin: 0;
         height: 100%;
+        width: auto;
+        padding: 0;
+
+        @include break( $point-1 ) {
+            width: 100vh;
+            padding: 0;
+            vertical-align: middle;
+        }
 
         .nav-item {
             margin: 0;
@@ -48,6 +76,10 @@
             display: inline-block;
             line-height: r(1rem);
             height: r(1rem);
+
+            @include break( $point-1 ) {
+                padding: 0 r(.5rem);
+            }
         }
 
         .nav-link {
@@ -57,8 +89,13 @@
             line-height: r(1rem);
             height: r(1rem);
             @include ff-sans-preload;
-            text-align: right;
             letter-spacing: 0.06em;
+            color: rgba( $white, .5 );
+
+            @include break( $point-1 ) {
+                font-size: r(0.75rem);
+                text-align: left;
+            }
 
             span {
                 position: relative;
@@ -83,12 +120,12 @@
             &.active span:after,
             &:hover span:after {
                 @include s-transition( all .3s linear );
-                background-color: rgba( $white, 1 );
+                background-color: rgba( $white, .5 );
             }
         }
     }
 
-    @media screen and (orientation: portrait) { display: none; }
+    // @media screen and (orientation: portrait) { display: none; }
 }
 
 .loaded #nav-landing .nav-lists .nav-link {

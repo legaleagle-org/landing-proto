@@ -1,6 +1,6 @@
 .btn-le-primary-outline {
     @include button-size( x(.5) , x(1.5), r(0.875rem), x(1), 0);
-    @include button-variant($white, transparent, $white);
+    @include button-variant( rgba($white, .6), transparent, rgba($white, .6) );
     @include ff-sans-medium;
     text-transform: uppercase;
     letter-spacing: 0.1em;
@@ -9,5 +9,9 @@
     &:hover {
         border-width: 1px;
         @include button-variant($black, $white, $white);
+    }
+
+    @include break( $point-1 ) {
+        @include button-size( x(.25) , x(.25), r(0.75rem), x(1), 0);
     }
 }
