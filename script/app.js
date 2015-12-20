@@ -50,58 +50,55 @@
 	*
 	*/
 
-	__webpack_require__.p =
-	    ( ( location.protocol === 'https:' ) ? 'https://' : 'http://' )
-	    + window.location.host
-	    + '/public/script/'
-	;
-
-	var dommon = __webpack_require__( 1 )
-	,   landing = __webpack_require__( 3 );
-
-	var elNavLinksWidth = 0;
-
 	(function( _self ){
 
-	    // if ( !landing.viewport.isLandscape() )
-	    //     document.getElementById( 'restrick-portrait-overlay' )
-	    //         .style.display = 'table';
+	    var dommon = __webpack_require__( 1 )
+	    ,   landing = __webpack_require__( 4 );
 
 	    dommon.ready( function() {
 
-	        var _self = this;
-
+	        // Navigation Elements
 	        var elNav = document.getElementById( 'nav-landing' )
-	        ,   elNavLinks = elNav.querySelectorAll( '.nav-link' )
-	        ,   elNavList = elNav.querySelectorAll( '.nav-lists' )[0];
+	        ,   elNavLinks = elNav.querySelectorAll( '.nav-link' );
 
+	        // Init Swiper JS
 	        _self.swiper = landing.section.initSwiper( elNavLinks );
 
-	        Array.prototype.forEach.call( elNavLinks, function( link, i ) {
+	        // Init main navigation
+	        landing.section.initNav( _self.swiper, elNavLinks );
 
-	            elNavLinksWidth += link.offsetWidth
+	        // Background Elements
+	        var elBg = document.querySelectorAll('.bg-img');
 
-	            link.addEventListener( 'click', function( e ) {
-	                e.preventDefault();
-	                var swipeTargetId = e.target.dataset.slideTo || 0;
+	        // Init imagesloaded js
+	        this.imgLoaded = new imagesLoaded(
+	            elBg,
+	            function( instance ) {
+	                instance.elements.map( function( a ) {
 
-	                landing.section.swipeTo( _self.swiper, swipeTargetId );
-	            })
-	        });
+	                    // DOM Elements & Attributes
+	                    var bgParent = dommon.traverse.closest( a, '.bg-container' )
+	                    ,   bgNewEl = document.createElement('div')
+	                    ,   imgSrc = a.attributes.src.value
+	                    ,   imgPos = a.dataset.bgPosition;
 
-	        updateMainNavLayout( elNavList, elNavLinksWidth );
+	                    if ( bgParent !== null) {
+
+	                        // Add css class
+	                        bgNewEl.classList.add('bgnew-img');
+
+	                        // Prepend to bg parent
+	                        bgNewEl = bgParent.insertBefore( bgNewEl, bgParent.firstChild );
+
+	                        // Style
+	                        bgNewEl.style.background = 'url("' + imgSrc + '")';
+	                        bgNewEl.style.backgroundSize = 'cover';
+	                        bgNewEl.style.backgroundPosition = imgPos;
+	                    }
+	                });
+	            }
+	        );
 	    });
-
-	    function updateMainNavLayout( _el, _w ) {
-
-	        var elNavListPaddingSides = 0;
-
-	        if ( window.innerWidth <= 360 ) {
-	            elNavListPaddingSides = Math.floor( (window.innerWidth - _w) / 4 );
-	            _el.style.paddingLeft = elNavListPaddingSides + 'px';
-	        }
-	    }
-
 	}( this ));
 
 /***/ },
@@ -109,7 +106,8 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	var Dommon = {
-	    ready: __webpack_require__( 2 )
+	    ready: __webpack_require__( 2 ),
+	    traverse: __webpack_require__( 3 )
 	};
 
 	module.exports = Dommon;
@@ -175,17 +173,42 @@
 
 /***/ },
 /* 3 */
+/***/ function(module, exports) {
+
+	function closest( $elem, selector ) {
+	    var $matches;
+
+	    // loop through parents
+	    while ( $elem && $elem !== document ) {
+	        // find all siblings that match the selector
+	        $matches = $elem.parentNode.querySelectorAll(selector);
+	        // check if our element is matched (poor-man's Element.matches())
+	        if ([].indexOf.call($matches, $elem) !== -1) return $elem;
+
+	        // go up the tree
+	        $elem = $elem.parentNode;
+	    }
+
+	    return null;
+	}
+
+	module.exports = {
+	    closest: closest
+	};
+
+/***/ },
+/* 4 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var Landing = {
-	    section: __webpack_require__( 4 ),
-	    viewport: __webpack_require__( 5 )
+	    section: __webpack_require__( 5 ),
+	    viewport: __webpack_require__( 6 )
 	};
 
 	module.exports = Landing;
 
 /***/ },
-/* 4 */
+/* 5 */
 /***/ function(module, exports) {
 
 	var Section = {};
@@ -206,14 +229,40 @@
 	    });
 
 	    _self.currentSlide = _swiper.activeIndex;
-	    _self.updateLinks( _links );
+	    _self.updateNav( _links );
 
 	    _swiper.on( 'slideChangeEnd', function () {
 	        _self.currentSlide = _swiper.activeIndex;
-	        _self.updateLinks( _links );
+	        _self.updateNav( _links );
 	    });
 
 	    return _swiper;
+	}
+
+	Section.initNav = function( swiper, linksEl ) {
+
+	    var _self = this;
+
+	    Array.prototype.forEach.call( linksEl, function( link, i ) {
+
+	        link.addEventListener( 'click', function( e ) {
+	            e.preventDefault();
+	            var swipeTargetId = e.target.dataset.slideTo || 0;
+
+	            _self.swipeTo( swiper, swipeTargetId );
+	        })
+	    });
+	}
+
+	Section.updateNav = function( linksEl ) {
+
+	    var _self = this;
+
+	    Array.prototype.forEach.call( linksEl, function( _link, i ) {
+
+	        if ( parseInt( _link.dataset.slideTo, 10 ) === _self.currentSlide ) _link.classList.add( 'active' );
+	        else _link.classList.remove( 'active' );
+	    });
 	}
 
 	Section.swipeTo = function( _swiper, _id ) {
@@ -227,21 +276,10 @@
 	    _swiper.slideTo( _id, 300 );
 	};
 
-	Section.updateLinks = function( _links ) {
-
-	    var _self = this;
-
-	    Array.prototype.forEach.call( _links, function( _link, i ) {
-
-	        if ( parseInt( _link.dataset.slideTo, 10 ) === _self.currentSlide ) _link.classList.add( 'active' );
-	        else _link.classList.remove( 'active' );
-	    });
-	}
-
 	module.exports = Section;
 
 /***/ },
-/* 5 */
+/* 6 */
 /***/ function(module, exports) {
 
 	var Viewport = {};
