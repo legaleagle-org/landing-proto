@@ -16,21 +16,21 @@ Section.initSwiper = function( _links ) {
     });
 
     _self.currentSlide = _swiper.activeIndex;
-    _self.updateLinks( _links );
+    _self.updateNav( _links );
 
     _swiper.on( 'slideChangeEnd', function () {
         _self.currentSlide = _swiper.activeIndex;
-        _self.updateLinks( _links );
+        _self.updateNav( _links );
     });
 
     return _swiper;
 }
 
-Section.initNav = function( swiper, navLinks ) {
+Section.initNav = function( swiper, linksEl ) {
 
     var _self = this;
 
-    Array.prototype.forEach.call( navLinks, function( link, i ) {
+    Array.prototype.forEach.call( linksEl, function( link, i ) {
 
         link.addEventListener( 'click', function( e ) {
             e.preventDefault();
@@ -38,6 +38,17 @@ Section.initNav = function( swiper, navLinks ) {
 
             _self.swipeTo( swiper, swipeTargetId );
         })
+    });
+}
+
+Section.updateNav = function( linksEl ) {
+
+    var _self = this;
+
+    Array.prototype.forEach.call( linksEl, function( _link, i ) {
+
+        if ( parseInt( _link.dataset.slideTo, 10 ) === _self.currentSlide ) _link.classList.add( 'active' );
+        else _link.classList.remove( 'active' );
     });
 }
 
@@ -51,16 +62,5 @@ Section.swipeTo = function( _swiper, _id ) {
 
     _swiper.slideTo( _id, 300 );
 };
-
-Section.updateLinks = function( _links ) {
-
-    var _self = this;
-
-    Array.prototype.forEach.call( _links, function( _link, i ) {
-
-        if ( parseInt( _link.dataset.slideTo, 10 ) === _self.currentSlide ) _link.classList.add( 'active' );
-        else _link.classList.remove( 'active' );
-    });
-}
 
 module.exports = Section;
