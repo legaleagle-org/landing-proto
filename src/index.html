@@ -222,7 +222,7 @@
                     <div class="inner">
 
                         <div class="bg">
-                            <div class="bg-12">
+                            <div class="bg-inner bg-12">
                                 <picture>
                                     <!--[if IE 9]><video style="display: none;"><![endif]-->
                                     <source srcset="image/sample/photo1_large.jpg, image/sample/photo1_large@2x.jpg 2x" media="(min-width: 1440px)">
@@ -257,7 +257,7 @@
                     <div class="inner">
 
                         <div class="bg">
-                            <div class="bg-12">
+                            <div class="bg-inner bg-12">
                                 <img
                                   class="bg-img"
                                   src="image/sample/photo6.jpg"
@@ -347,7 +347,7 @@
                     .all([ fontA.check(), fontB.check(), fontC.check(), fontD.check(), fontE.check(), fontF.check(), fontG.check(), fontH.check(), fontI.check(), fontJ.check(), fontK.check(), fontL.check() ])
                     .then(
                         function( res ){
-                            w.document.documentElement.className += " loaded";
+                            w.document.documentElement.className += " loaded-fonts";
                         },
                         function( err ){
                             console.log( err );

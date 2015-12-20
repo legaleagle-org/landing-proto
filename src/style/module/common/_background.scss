@@ -10,7 +10,7 @@
 
         *[class^="bg-"] {
             position: relative;
-            float: right;
+            float: left;
             overflow: hidden;
             max-height: 100%;
             height: 100%;
@@ -38,15 +38,16 @@
         }
 
         .use-shadow {
-            -webkit-box-shadow: 1px 0px 4px 0px rgba(0,0,0,.5);
-            -moz-box-shadow: 1px 0px 4px 0px rgba(0,0,0,.5);
-            box-shadow: 1px 0px 4px 0px rgba(0,0,0,.5);
+            -webkit-box-shadow: inset 2px 0px 4px 0px rgba(0,0,0,0.75);
+            -moz-box-shadow: inset 2px 0px 4px 0px rgba(0,0,0,0.75);
+            box-shadow: inset 2px 0px 4px 0px rgba(0,0,0,0.75);
         }
 
         *[class^="bg-"] {
 
             img {
-                display: block;
+                // display: block;
+                display: none;
                 position: absolute;
                 top: 0;
                 width: 100%;
@@ -58,10 +59,12 @@
                 &:hover { @include s-scale( 1.1 ); }
             }
         }
-    }
-}
 
-.bg-img {
-    width: 1px !important;
-    height: 1px !important;
+        .bgnew-img {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    }
 }

@@ -14,7 +14,7 @@
 
     z-index: $z-page;
 
-    .loaded & {
+    .loaded-fonts & {
         @include s-transition( opacity 3s linear );
         opacity: 1;
         pointer-events: initial;

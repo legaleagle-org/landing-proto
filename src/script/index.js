@@ -28,7 +28,22 @@
         this.il = new imagesLoaded(
             elBg,
             function( instance ) {
-                console.log( instance );
+                instance.elements.map( function( a ) {
+
+                    var bgParent = dommon.traverse.closest( a, '.bg-inner' )
+                    ,   bgNewEl = document.createElement('div')
+                    ,   imgSrc = a.attributes.src.value;
+
+                    bgNewEl.classList.add('bgnew-img');
+
+                    bgNewEl = bgParent.insertBefore( bgNewEl, bgParent.firstChild );
+
+                    bgNewEl.style.background = 'url("' + imgSrc + '")';
+                    bgNewEl.style.backgroundSize = 'cover';
+                    bgNewEl.style.backgroundPosition = '50% 0%';
+
+                    return a;
+                });
             }
         );
 
