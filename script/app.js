@@ -57,6 +57,9 @@
 
 	    dommon.ready( function() {
 
+	        // Detect os
+	        landing.browser.detect();
+
 	        // Navigation Elements
 	        var elNav = document.getElementById( 'nav-landing' )
 	        ,   elNavLinks = elNav.querySelectorAll( '.nav-link' );
@@ -67,37 +70,8 @@
 	        // Init main navigation
 	        landing.section.initNav( _self.swiper, elNavLinks );
 
-	        // Background Elements
-	        var elBg = document.querySelectorAll('.bg-img');
-
-	        // Init imagesloaded js
-	        this.imgLoaded = new imagesLoaded(
-	            elBg,
-	            function( instance ) {
-	                instance.elements.map( function( a ) {
-
-	                    // DOM Elements & Attributes
-	                    var bgParent = dommon.traverse.closest( a, '.bg-container' )
-	                    ,   bgNewEl = document.createElement('div')
-	                    ,   imgSrc = a.attributes.src.value
-	                    ,   imgPos = a.dataset.bgPosition;
-
-	                    if ( bgParent !== null) {
-
-	                        // Add css class
-	                        bgNewEl.classList.add('bgnew-img');
-
-	                        // Prepend to bg parent
-	                        bgNewEl = bgParent.insertBefore( bgNewEl, bgParent.firstChild );
-
-	                        // Style
-	                        bgNewEl.style.background = 'url("' + imgSrc + '")';
-	                        bgNewEl.style.backgroundSize = 'cover';
-	                        bgNewEl.style.backgroundPosition = imgPos;
-	                    }
-	                });
-	            }
-	        );
+	        // Init background
+	        _self.landingImagesLoaded = landing.section.initBackground();
 	    });
 	}( this ));
 
@@ -201,8 +175,8 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	var Landing = {
-	    section: __webpack_require__( 5 ),
-	    viewport: __webpack_require__( 6 )
+	    browser: __webpack_require__( 5 ),
+	    section: __webpack_require__( 6 )
 	};
 
 	module.exports = Landing;
@@ -210,6 +184,22 @@
 /***/ },
 /* 5 */
 /***/ function(module, exports) {
+
+	var Browser = {};
+
+	Browser.detect = function() {
+	    var _d = Detectizr.os;
+
+	    alert( 'You\'re using ' + _d.name + ' v' + _d.version );
+	}
+
+	module.exports = Browser;
+
+/***/ },
+/* 6 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var dommon = __webpack_require__(1);
 
 	var Section = {};
 
@@ -276,19 +266,45 @@
 	    _swiper.slideTo( _id, 300 );
 	};
 
-	module.exports = Section;
+	Section.initBackground = function() {
 
-/***/ },
-/* 6 */
-/***/ function(module, exports) {
+	    // CSS class for document
+	    document.documentElement.classList.add( 'loaded-images' );
 
-	var Viewport = {};
+	    // Init imagesloaded js
+	    return new imagesLoaded(
+	        document.querySelectorAll('.bg-img'),
+	        function( instance ) {
 
-	Viewport.isLandscape = function() {
-	    return !!(verge.viewportW() > verge.viewportH());
+	            console.log( 'image' );
+
+	            instance.elements.map( function( a ) {
+
+	                // DOM Elements & Attributes
+	                var bgParent = dommon.traverse.closest( a, '.bg-container' )
+	                ,   bgNewEl = document.createElement('div')
+	                ,   imgSrc = ( typeof a.attributes.src === 'undefined' ) ? a.attributes.srcset.value : ( a.attributes.src.value ) ? a.attributes.src.value : ''
+	                ,   imgPos = a.dataset.bgPosition;
+
+	                if ( bgParent !== null) {
+
+	                    // Add css class
+	                    bgNewEl.classList.add('bgnew-img');
+
+	                    // Prepend to bg parent
+	                    bgNewEl = bgParent.insertBefore( bgNewEl, bgParent.firstChild );
+
+	                    // Style
+	                    bgNewEl.style.background = 'url("' + imgSrc + '")';
+	                    bgNewEl.style.backgroundSize = 'cover';
+	                    bgNewEl.style.backgroundPosition = imgPos;
+	                }
+	            });
+	        }
+	    );
 	}
 
-	module.exports = Viewport;
+	module.exports = Section;
 
 /***/ }
 /******/ ]);

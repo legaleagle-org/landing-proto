@@ -6490,7 +6490,7 @@ button& {
   clear: both;
 }
 
-.loaded-fonts #page-landing {
+.loaded-images #page-landing {
   transition: opacity 3s linear;
   opacity: 1;
   pointer-events: initial;
@@ -6517,9 +6517,15 @@ button& {
 
 @media screen and (max-width: 767px) {
   #header-landing {
+    position: fixed;
     bottom: 0;
     top: auto;
+    height: 3rem;
   }
+}
+
+.ios #header-landing {
+  bottom: 2.25rem;
 }
 
 #header-landing #header-brand {
@@ -6571,6 +6577,7 @@ button& {
 #nav-landing .nav-lists {
   display: table-cell;
   vertical-align: bottom;
+  text-align: left;
   list-style: none outside none;
   margin: 0;
   height: 100%;
@@ -6580,9 +6587,10 @@ button& {
 
 @media screen and (max-width: 767px) {
   #nav-landing .nav-lists {
-    width: 100vh;
-    padding: 0;
-    vertical-align: middle;
+    display: block;
+    width: auto;
+    margin: 0 auto;
+    text-align: center;
   }
 }
 
